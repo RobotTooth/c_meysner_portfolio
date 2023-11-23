@@ -1,46 +1,75 @@
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
-header {
-    text-align: center; /* Optional: Center the content within the header */
-    overflow: hidden; /* Clear the floats within the header */
-    height: 5rem; /* Set the height of the header */
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
 
-  .logo {
-    float: left; /* Float the logo to the left */
-    height: 100%;
-    
-  }
+.background-container {
+  position: absolute;
+  background-image: url('../resources/images/P7260338.JPG');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center top;
+  height: 100%;
+  z-index: -1;
+}
 
-  img {
-    max-height: 75%; /* Set the maximum height of the logo image to fit inside the header */
-    width: auto;
-    margin-top: 20px;
-    margin-left: 45px;
-  }
+.background-overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(200, 200, 200, 0.5); 
+}
 
-  nav {
-    float: right; /* Float the navigation to the right */
-  }
+  header {
+  position: relative;
+  text-align: center; 
+  overflow: hidden; 
+  height: 5rem; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
-  ul {
-    list-style: none; /* Remove default list styling */
-    padding: 0; /* Remove default padding */
-    margin: 0; /* Remove default margin */
-    display: flex;
-    align-items: center;
-  }
+.logo {
+  float: left; 
+  height: 100%;
+  
+}
 
-  li {
-    display: inline; /* Set list items to display inline */
-    margin-right: 50px; /* Optional: Add spacing between list items */
-  }
+img {
+  max-height: 75%; 
+  width: auto;
+  margin-top: 20px;
+  margin-left: 45px;
+}
 
-  a {
-    text-decoration: none; /* Remove underline from links */
-  }
+nav {
+  float: right; 
+}
+
+ul {
+  list-style: none;
+  padding: 0; 
+  margin: 0; 
+  display: flex;
+  align-items: center;
+}
+
+li {
+  display: inline;
+  margin-right: 50px;
+}
+
+a {
+  text-decoration: none; 
+}
